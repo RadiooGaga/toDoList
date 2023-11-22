@@ -1,0 +1,108 @@
+:root {
+    --rtc-color-1: rgb(255, 255, 255);
+    --rtc-color-2: rgb(158, 196, 183);
+    --rtc-color-3: rgb(0, 0, 0);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  ul, ol {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100svh;
+  }
+  
+  /* SCROLLBAR */
+  /* width */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--rtc-color-1);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--rtc-color-3);
+  }
+
+  h1 {
+    display: flex;
+    position: relative;
+    bottom: 1em;
+    padding: 20px;
+  }
+  
+  .list {
+    width: 39%;
+    max-height: 50svh;
+    overflow-y: scroll;
+    border: 3px solid black;
+    background-color: pink;
+  }
+  
+  .list > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+    border-bottom: 3px solid rgb(68, 67, 67);
+  }
+  
+  .list > li:last-child {
+    border-bottom: none;
+  }
+  
+  .list > li.completed {
+    background-color: var(--rtc-color-2);
+    text-decoration: line-through;
+  }
+  
+  .new {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 39%;
+      padding: 40px 0 40px 0;
+      background-color: antiquewhite;
+      font-size: 30px;
+      gap: 20px;
+  }
+  
+  .new > #insert-task, .new > button {
+      width: 200px;
+      padding: 20px 30px;
+      border-radius: 10px;
+      border: 3px solid black;
+      background-color: rgb(182, 216, 242);
+  }
+  
+  .new > button {
+      cursor: pointer; 
+  }
+
+  button:hover {
+    background-color: pink;
+  }
+
+ 
